@@ -1,15 +1,17 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <title>{{ page.title }} | {{ site.title }}</title>
-   <link rel="stylesheet" href="/assets/style.css">
- </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
 
+  <!-- Container that holds both navigation and content -->
+  <div class="container">
 
- <body>
-
-  <div class="top-panel">
+    <!-- Top navigation panel -->
+    <div class="top-panel">
       <nav>
         <ul>
           {% for link in site.top_panel_links %}
@@ -18,11 +20,13 @@
         </ul>
       </nav>
     </div>
- 
-     <!-- Main Content -->
-     <div class="main-content">
-       {{ content }}
-     </div>
 
- </body>
- </html>
+    <!-- Main Content -->
+    <div class="main-content">
+      {{ content }}
+    </div>
+
+  </div>
+
+</body>
+</html>
