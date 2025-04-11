@@ -6,7 +6,6 @@ body {
   height: 100vh; /* Ensure the body takes full viewport height */
 }
 
-/* Reset default list styles */
 .navbar ul {
   list-style: none;
   margin: 0;
@@ -29,4 +28,9 @@ body {
 .navbar ul li a:hover {
   background-color: #555;
   border-radius: 5px;
+}
+
+/* Main content styling */
+.main-content {
+  padding: 20px;
 }
