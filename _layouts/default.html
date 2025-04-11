@@ -6,19 +6,22 @@
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-  <!-- Top Panel -->
-  <div class="top-panel">
-    {% for link in site.top_panel_links %}
-      <a href="{{ link.url }}">{{ link.name }}</a>
-    {% endfor %}
-  </div>
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{{ "/" | relative_url }}">Home</a></li>
+        {% for link in site.top_panel_links %}
+          <li><a href="{{ link.url | relative_url }}">{{ link.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
 
+  <!-- Main Content -->
   <main>
     {{ content }}
   </main>
 
-  <footer>
-    <p>© {{ site.author }}, {{ "now" | date: "%Y" }}</p>
-  </footer>
 </body>
 </html>
