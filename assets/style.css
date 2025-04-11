@@ -7,7 +7,6 @@ padding: 0;
 
 /* Top navigation panel styles */
 .top-panel {
-background-color: #333;
 width: 100%; /* Full width */
 padding: 0;
 }
@@ -33,7 +32,7 @@ text-decoration: none;
 }
 
 .top-panel li a:hover {
-  background-color: #e64a19;
+  color: #e64a19;
 }
 
 /* Main content area styles */
