@@ -18,7 +18,7 @@ repository               : "https://juliettecx.github.io"
 author                   : "Juliette Caucheteux"
 top_panel_links:
   - name: "CV"
-    url: "_pages/cv"
+    url: "/_pages/cv"
   - name: "Research"
     url: "/research"
   - name: "Miscellaneous"
