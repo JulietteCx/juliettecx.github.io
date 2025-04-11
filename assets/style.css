@@ -10,6 +10,19 @@ body {
   background-color: #f4f4f4;
 }
 
+/* Sidebar on the left */
+.sidebar {
+  width: 14.2857%; /* 1/7th of the screen width */
+  background-color: #f4f4f4; /* White background */
+  height: 100%; /* Full viewport height */
+  padding: 20px;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  position: fixed; /* Fixed on the left */
+  top: 0;
+  left: 0;
+  z-index: 1; /* Keeps the sidebar above other content */
+}
+
 /* Container to hold both the navigation and content */
 .container {
   width: 40%; /* NEW: 40% of the screen width (2nd to 4th part) */
