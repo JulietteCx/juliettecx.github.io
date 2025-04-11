@@ -2,3 +2,21 @@ body {
   font-family: "-apple-system", ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
 }
 
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  flex: 0 0 20%; /* Sidebar takes up 20% of the width */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
