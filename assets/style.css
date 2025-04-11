@@ -1,36 +1,38 @@
 body {
-  font-family: "-apple-system", ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  display: flex;
-  height: 100vh; /* Ensure the body takes full viewport height */
+  font-family: sans-serif;
 }
 
-.navbar ul {
-  list-style: none;
-  margin: 0;
+.top-panel {
+  background-color: #333;
   padding: 0;
-  display: flex;
-  justify-content: space-evenly; /* Evenly distribute links */
-  align-items: center;
-  background-color: #333; /* Set background color */
-  padding: 10px 0; /* Add vertical padding */
 }
 
-/* Style the navigation links */
-.navbar ul li a {
+.top-panel ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.top-panel li {
+  float: left;
+}
+
+.top-panel li a {
+  display: block;
   color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  padding: 10px 15px;
 }
 
-/* Change link color on hover */
-.navbar ul li a:hover {
-  background-color: #555;
-  border-radius: 5px;
+.top-panel li a:hover {
+  background-color: #111;
 }
 
-/* Main content styling */
+/* Clear floats so content doesn't sit next to the navbar */
 .main-content {
+  clear: both;
   padding: 20px;
 }
