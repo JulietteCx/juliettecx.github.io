@@ -1,28 +1,27 @@
-/*  Good style where the navigation bar is on top of the content*/
 /* Reset body margins and padding */
 body {
   margin: 0;
   font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
   padding: 0;
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: flex-start; /* Align content to the top */
-  height: 100vh; /* Full height of the viewport */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: flex-start; /* Aligns the content to the top */
+  height: 100vh; /* Full viewport height */
   background-color: #f4f4f4;
 }
 
-/* Container that holds both the navigation and content */
+/* Container to hold both the navigation and content */
 .container {
-  width: 40%; /* 2/5ths of the screen width (from 2nd to 4th part) */
-  min-width: 800px; /* Optional: to avoid shrinking too much */
-  max-width: 1200px; /* Optional: to avoid stretching too wide */
+  width: 40%; /* NEW: 40% of the screen width (2nd to 4th part) */
+  min-width: 800px; /* Optional: prevents it from becoming too small */
+  max-width: 1200px; /* Optional: prevents it from becoming too large */
 }
 
 /* Top navigation panel styles */
 .top-panel {
   width: 100%; /* Full width of the container */
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f4f4f4; /* Optional: for better visibility */
 }
 
 .top-panel ul {
@@ -34,7 +33,7 @@ body {
 }
 
 .top-panel li {
-  flex: 1; /* Make each list item take equal space */
+  flex: 1; /* Each list item takes equal space */
 }
 
 .top-panel li a {
@@ -47,11 +46,11 @@ body {
 
 .top-panel li a:hover {
   color: #e64a19;
-  background-color: #f4f4f4;
+  background-color: #f4f4f4; /* Optional: for better visibility */
 }
 
 /* Main content area styles */
 .main-content {
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #f4f4f4; /* Optional: for better visibility */
 }
