@@ -6,6 +6,12 @@
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
+    <!-- Top Panel -->
+   <div class="top-panel">
+     {% for link in site.top_panel_links %}
+       <a href="{{ link.url }}">{{ link.name }}</a>
+     {% endfor %}
+   </div>
   <!-- Header -->
   <header>
     <nav>
