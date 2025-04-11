@@ -1,47 +1,35 @@
+/* Reset body margins and padding */
 body {
-  margin: 0;
-  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-  padding: 0;
-  display: flex;
-  justify-content: center; /* Centers the entire page horizontally */
-  align-items: flex-start; /* Aligns content to the top */
-  height: 100vh; /* Full height of the viewport */
-  background-color: #f4f4f4; /* Background color */
-}
-
-/* Centered container that occupies between the 2nd and 4th part of the screen */
-.container {
-  width: 40%; /* 2/5ths of the screen width */
-  min-width: 800px; /* Optional: set a minimum width if you want a larger layout */
-  max-width: 1200px; /* Optional: set a maximum width */
-  margin: 0 auto; /* Centers the container horizontally */
+margin: 0;
+font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+padding: 0;
 }
 
 /* Top navigation panel styles */
 .top-panel {
-  background-color: #333;
-  width: 100%; /* Full width of the container */
-  padding: 0;
+background-color: #333;
+width: 100%; /* Full width */
+padding: 0;
 }
 
 .top-panel ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  display: flex; /* Use flexbox to align items horizontally */
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+display: flex; /* Use flexbox to align items horizontally */
 }
 
 .top-panel li {
-  flex: 1; /* Make each list item take equal space */
+flex: 1; /* Make each list item take equal space */
 }
 
 .top-panel li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
 }
 
 .top-panel li a:hover {
@@ -50,6 +38,7 @@ body {
 
 /* Main content area styles */
 .main-content {
-  padding: 20px;
-  background-color: #fff; /* Optional: background color for the content */
+padding: 20px;
+clear: both; /* Ensures content starts below the navigation */
+  background-color: #f4f4f4; /* Optional: for better visibility */
 }
