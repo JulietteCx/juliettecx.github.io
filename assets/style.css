@@ -9,8 +9,7 @@ padding: 0;
 .top-panel {
 width: 100%; /* Full width */
 padding: 0;
-    background-color: #f4f4f4; /* Optional: for better visibility */
-
+background-color: #f4f4f4; /* Optional: for better visibility */
 }
 
 .top-panel ul {
