@@ -5,6 +5,9 @@
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="/assets/style.css">
 </head>
+    <!-- Sidebar -->
+
+{% include sidebar.html %}
 <body>
   <!-- Top Panel -->
   <div class="top-panel">
@@ -17,9 +20,6 @@
       </ul>
     </nav>
   </div>
-  <!-- Sidebar -->
-
-{% include sidebar.html %}
   <!-- Main Content -->
   <main>
     {{ content }}
