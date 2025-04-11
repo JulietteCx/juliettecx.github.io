@@ -3,11 +3,25 @@ body {
   margin: 0;
   font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
   padding: 0;
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: flex-start; /* Aligns content to the top */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #f4f4f4; /* Background color */
+}
+
+/* Centered container that occupies between the 2nd and 4th part of the screen */
+.container {
+  width: 40%; /* 2/5ths of the screen width */
+  min-width: 800px; /* Optional: set a minimum width if you want a larger layout */
+  max-width: 1200px; /* Optional: set a maximum width */
+  margin: 0 auto; /* Centers the container horizontally */
 }
 
 /* Top navigation panel styles */
 .top-panel {
-  width: 100%; /* Full width */
+  background-color: #333;
+  width: 100%; /* Full width of the container */
   padding: 0;
 }
 
@@ -32,11 +46,13 @@ body {
 }
 
 .top-panel li a:hover {
-  background-color: #e64a19;
+  background-color: #111;
 }
 
 /* Main content area styles */
 .main-content {
   padding: 20px;
   clear: both; /* Ensures content starts below the navigation */
+  background-color: #fff; /* Optional: background color for the content */
 }
+
