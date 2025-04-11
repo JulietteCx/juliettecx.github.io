@@ -19,7 +19,4 @@ author                   : "Juliette Caucheteux"
 top_panel_links:
   - name: "CV"
     url: "/cv/"
-  - name: "Research"
-    url: "/research/"
-  - name: "Miscellaneous"
-    url: "/miscellaneous/"
+
