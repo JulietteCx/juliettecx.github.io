@@ -1,10 +1,14 @@
+/* Reset body margins and padding */
 body {
   margin: 0;
   font-family: sans-serif;
+  padding: 0;
 }
 
+/* Top navigation panel styles */
 .top-panel {
   background-color: #333;
+  width: 100%; /* Full width */
   padding: 0;
 }
 
@@ -13,10 +17,11 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  display: flex; /* Use flexbox to align items horizontally */
 }
 
 .top-panel li {
-  float: left;
+  flex: 1; /* Make each list item take equal space */
 }
 
 .top-panel li a {
@@ -31,8 +36,9 @@ body {
   background-color: #111;
 }
 
-/* Clear floats so content doesn't sit next to the navbar */
+/* Main content area styles */
 .main-content {
-  clear: both;
   padding: 20px;
+  clear: both; /* Ensures content starts below the navigation */
+  background-color: #f4f4f4; /* Optional: for better visibility */
 }
