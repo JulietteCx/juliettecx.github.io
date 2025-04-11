@@ -22,7 +22,3 @@ body {
   flex: 0 0 20%;
 }
 
-/* For a sidebar that takes up 1/4 (25%) of the width */
-.sidebar {
-  flex: 0 0 25%;
-}
