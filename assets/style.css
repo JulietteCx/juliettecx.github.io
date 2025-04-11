@@ -7,7 +7,6 @@ body {
 
 /* Top navigation panel styles */
 .top-panel {
-  background-color: #333;
   width: 100%; /* Full width */
   padding: 0;
 }
@@ -33,12 +32,11 @@ body {
 }
 
 .top-panel li a:hover {
-  background-color: #111;
+  background-color: #f9f9f9;
 }
 
 /* Main content area styles */
 .main-content {
   padding: 20px;
   clear: both; /* Ensures content starts below the navigation */
-  background-color: #f4f4f4; /* Optional: for better visibility */
 }
