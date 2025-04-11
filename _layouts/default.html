@@ -9,21 +9,27 @@
 
 {% include sidebar.html %}
 <body>
-  <!-- Top Panel -->
-  <div class="top-panel">
-    <nav>
-      <ul>
-        <li><a href="{{ "/" | relative_url }}">Home</a></li>
-        {% for link in site.top_panel_links %}
-          <li><a href="{{ link.url | relative_url }}">{{ link.name }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </div>
-  <!-- Main Content -->
-  <main>
-    {{ content }}
-  </main>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <!-- Navigation links -->
+    <a href="{{ '/' | relative_url }}">Home</a>
+    {% for link in site.nav_links %}
+      <a href="{{ link.url | relative_url }}">{{ link.name }}</a>
+    {% endfor %}
+  </nav>
 
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar content -->
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      {{ content }}
+    </div>
+  </div>
 </body>
 </html>
