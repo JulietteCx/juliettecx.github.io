@@ -53,4 +53,5 @@ body {
 .main-content {
   padding: 20px;
   background-color: #f4f4f4; /* Optional: for better visibility */
+  line-height: 1.6; /* Add line-height for better readability */
 }
