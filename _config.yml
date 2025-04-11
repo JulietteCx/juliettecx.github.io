@@ -27,5 +27,5 @@ top_panel_links:
     url: "/"
   - name: "CV"
     url: "/cv/"
- - name: "Research"
+  - name: "Research"
     url: "/research/"
