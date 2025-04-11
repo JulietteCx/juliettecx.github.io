@@ -1,5 +1,9 @@
 body {
   font-family: "-apple-system", ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh; /* Ensure the body takes full viewport height */
 }
 
 .container {
