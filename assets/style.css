@@ -26,6 +26,7 @@ flex: 1; /* Make each list item take equal space */
 
 .top-panel li a {
 display: block;
+color: black;
 text-align: center;
 padding: 14px 16px;
 text-decoration: none;
