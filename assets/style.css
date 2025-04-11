@@ -1,10 +1,9 @@
-/* Reset body margins and padding */
 body {
   margin: 0;
   font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
   padding: 0;
   display: flex;
-  justify-content: center; /* Centers the content horizontally */
+  justify-content: center; /* Centers the entire page horizontally */
   align-items: flex-start; /* Aligns content to the top */
   height: 100vh; /* Full height of the viewport */
   background-color: #f4f4f4; /* Background color */
@@ -52,7 +51,5 @@ body {
 /* Main content area styles */
 .main-content {
   padding: 20px;
-  clear: both; /* Ensures content starts below the navigation */
   background-color: #fff; /* Optional: background color for the content */
 }
-
