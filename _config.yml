@@ -23,6 +23,8 @@ defaults:
 
 # Top panel links for navigation
 top_panel_links:
+  - name: "Home"
+    url: "/landing/"
   - name: "CV"
     url: "/cv/"
   - name: "Research"
