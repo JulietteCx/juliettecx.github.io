@@ -12,7 +12,7 @@ body {
 
 /* Sidebar on the left */
 .sidebar {
-  width: 14.2857%; /* 1/7th of the screen width */
+  width: 10%; /* 1/7th of the screen width */
   background-color: #f4f4f4; /* White background */
   height: 100%; /* Full viewport height */
   padding: 20px;
