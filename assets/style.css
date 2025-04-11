@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-  padding: 0;
+  padding: 20px;
   display: flex;
   justify-content: center; /* Centers the content horizontally */
   align-items: flex-start; /* Aligns the content to the top */
