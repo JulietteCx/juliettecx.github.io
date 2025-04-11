@@ -6,21 +6,27 @@ body {
   height: 100vh; /* Ensure the body takes full viewport height */
 }
 
-.container {
+/* Reset default list styles */
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  width: 100%;
+  justify-content: space-evenly; /* Evenly distribute links */
+  align-items: center;
+  background-color: #333; /* Set background color */
+  padding: 10px 0; /* Add vertical padding */
 }
 
-.sidebar {
-  background-color: #333;
+/* Style the navigation links */
+.navbar ul li a {
   color: white;
-  padding: 20px;
-  flex: 0 0 20%; /* Sidebar takes up 20% of the width */
-  box-sizing: border-box; /* Include padding in the width calculation */
+  text-decoration: none;
+  padding: 10px 15px;
 }
 
-.main-content {
-  flex-grow: 1;
-  padding: 20px;
-  box-sizing: border-box; /* Include padding in the width calculation */
+/* Change link color on hover */
+.navbar ul li a:hover {
+  background-color: #555;
+  border-radius: 5px;
 }
