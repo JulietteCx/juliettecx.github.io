@@ -34,4 +34,4 @@ top_panel_links:
   - name: "Miscellaneous"
     url: "/miscellaneous/"
   - name: "Recipes"
-    url: "/_miscellaneous/recipes/"
+    url: "/miscellaneous/recipes/"
