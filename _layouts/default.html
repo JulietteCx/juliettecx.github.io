@@ -18,13 +18,22 @@
 
     <!-- Top navigation panel -->
     <div class="top-panel">
-      <nav>
-        <ul>
-          {% for link in site.top_panel_links %}
-            <li><a href="{{ link.url | relative_url }}">{{ link.name }}</a></li>
-          {% endfor %}
-        </ul>
-      </nav>
+<nav>
+  <ul>
+    {% for link in site.top_panel_links %}
+      <li class="nav-item {% if link.sublinks %}has-dropdown{% endif %}">
+        <a href="{{ link.url | relative_url }}">{{ link.name }}</a>
+        {% if link.sublinks %}
+          <ul class="dropdown">
+            {% for sublink in link.sublinks %}
+              <li><a href="{{ sublink.url | relative_url }}">{{ sublink.name }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
     </div>
 
     <!-- Main Content -->
