@@ -1,0 +1,131 @@
+---
+layout: default
+title: "Salty"
+permalink: /miscellaneous/salty/
+author_profile: true
+---
+
+<style>
+    .toggle-btn {
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 12px 20px;
+        background-color: #C03700;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+    .toggle-btn:hover {
+        background-color: #e64a19;
+    }
+    .hidden {
+        display: none;
+    }
+</style>
+
+<script>
+    function toggleContent(recipeId) {
+        const content = document.getElementById(recipeId);
+        content.classList.toggle('hidden');
+    }
+</script>
+
+<p>When I'm not working at the Bank of England or on my PhD, I love to cook — 
+    especially French pastries! — and to create my own recipes. I want to use this page 
+    to share some of this and some tips I learned along the way.</p>
+    <h1> Cooking Recipes </h1>
+            <h2>The ultimate chocolate cake </h2>
+            <p>I love chocolate cakes. I try to make one for each birthday. For a really long time (and I probably mean for the last ten years) I have been failing at making them as I wanted, i.e., not too sweet, crispy at the top and slightly melting at the bottom. After years of experimenting, here's the ultimate recipe:</p>
+            <button class="toggle-btn" onclick="toggleContent('recipe-chocolate')">Toggle Recipe</button>
+    
+            <div id="recipe-chocolate" class="hidden">
+                <h3>Ingredients</h3>
+                <ul>
+                    <li>200g chocolate (I take it with 70% cocoa)</li>
+                    <li>100g butter</li>
+                    <li>60g flour</li>
+                    <li>3 eggs</li>
+                    <li>10g of sugar (literally)</li>
+                </ul>
+    
+                <h3>Steps</h3>
+                <div class="steps">
+                    <p>Preheat the oven in fan mode at 180&deg;C.</p>
+                    <p>Grease a plate (I have a 20cm-squared glass one).</p>
+                    <p>Break the chocolate in tiny pieces.</p>
+                    <p>Dice the butter in small cubes.</p>
+                    <p>In a double boiler, melt the chocolate.</p>
+                    <p>When the chocolate is melted, add small pieces of butter, one after another.</p>
+                    <p>In the meantime, whip up the eggs (combined, yolk and white together) until the preparation triples in volume.</p>
+                    <p>When all the butter is incorporated, add the flour to the chocolate preparation (<em>this is key!</em>).</p>
+                    <p>Combine the two preparations by adding the chocolate mixture to the eggs. Mix very delicately until the preparation is homogenous. Avoid overmixing to prevent the eggs from collapsing.</p>
+                    <p>Pour the preparation into the greased plate.</p>
+                    <p>Bake for 20 minutes, or until you can slide a knife in and it comes out clean.</p>
+                </div>
+    
+                <p>You're done!</p>
+            </div>
+
+         <h2>Parfait à la rhubarbe et coulis à la framboise (<i>Rhubarb Parfait with Raspberry Coulis</i>) </h2>
+        <p> I created this recipe after a bit of trial and error. I am particularly proud of it because it's possible to make it in batch and freeze it. It's a bit advanced, but if you follow the steps carefully, it will be worth it! Aside from the usual cooking utensils, you will need a cooking thermometer.</p>
+        <button class="toggle-btn" onclick="toggleContent('recette-parfait')">Toggle Recipe</button>
+        
+                <div id="recette-parfait" class="hidden">
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>500g rhubarb</li>
+                        <li>100g raspberries</li>
+                        <li> 20cL cream (liquid) </li>
+                        <li>3 eggs</li>
+                        <li>50g water</li>
+                        <li>100g sugar</li>
+                    </ul>
+        
+                    <h3>Steps</h3>
+                    <div class="steps">
+                        <ol>
+                        <p>In two separate pots, melt the raspberry and the rhubarb, at low temperature. Stir occasionally. When the preparation is smooth, let it cool at room temperature. </p>
+                        <p>In the meantime, in a cold bowl, whip up the cream in a chantilly. You can add a bit of sugar & vanilla. Once done, let it cool at room temperature.</p>
+                        <b> Sabayon </b>
+                        <p> With the eggs, the sugar and the water, prepare a sabayon: </p>
+                        <p> Put the water and the sugar in a small pan and heat until 118°C (this is why we need a thermometer!).</p>
+                        <p>In the meantime, whisk the eggs in a beater until the preparation doubles in volume and becomes whiter.</p>
+                        <p> Once the sugar + water has reached 118°C add slowly to the eggs while still beating. The idea is that the heated sugar will "cook" the preparation. </p>
+                            <p> Continue whipping the preparation until it cools down (you can touch the bowl to get an idea). </p>
+                            <p> When all the (i) rhubarb (ii) whipped cream and (iii) sabayon preparations are roughly the same temperature, combine together and mix delicately so that the sabayon does not fall down </p>
+                        <b> Staging: </b>
+                            <p> Put the preparation in a piping bag with your favourite 1cm nozzle. </p>
+                        </ol>
+                    </div>
+        
+                    <p>You're done!</p>
+                </div>
+
+            <h2>Italian style hot chocolate</h2>
+                <p>To warm up my winters, I love to make this hot chocolate recipe, as I found it in Torino! This recipe makes a very thick hot chocolate, almost like a chocolate sauce! Really filling.</p>
+                <button class="toggle-btn" onclick="toggleContent('hot-chocolate-recipe')">Toggle Recipe</button>
+                <div id="hot-chocolate-recipe" class="hidden">
+                    <h3>Ingredients for 1 person</h3>
+                    <ul>
+                        <li>30g cocoa powder</li>
+                        <li>10g cornstarch</li>
+                        <li>5g sugar</li>
+                        <li>1 glass of milk </li>
+                    </ul>
+        
+                    <h3>Steps</h3>
+                    <div class="steps">
+                        <p> In a hot pot, add the cocoa powder, the cornstarch and the sugar. Mix very delicately. </p>
+                        <p> When the dry preparation is homogenous, carefully add in the milk. </p>
+                        <p> Turn on the heat to a high temperature. Mix continuously until the preparation thickens. </p>
+                        <p> Do not bring to a boil!</p>
+                    </div>
+                    <p>Add some whipped cream if you're keen!</p>
+    
+                    <hr>
+    
+
+</div>
