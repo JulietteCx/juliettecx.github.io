@@ -36,6 +36,6 @@ top_panel_links:
     sublinks:
       - name: "Recipes"
         url: "/miscellaneous/recipes/"
-      - name: "CV"
-        url: "/cv/"
+      - name: "Salty"
+        url: "/miscellaneous/salty/"
     
