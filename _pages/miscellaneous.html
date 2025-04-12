@@ -1,3 +1,5 @@
+
+
 ---
 layout: default
 title: "Miscellaneous"
@@ -5,39 +7,38 @@ permalink: /miscellaneous/
 author_profile: true
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Miscellaneous</title>
-    <style>
+<style>
+    .toggle-btn {
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 12px 20px;
+        background-color: #C03700;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+    .toggle-btn:hover {
+        background-color: #e64a19;
+    }
+    .hidden {
+        display: none;
+    }
+</style>
 
-        .toggle-btn {
-            display: inline-block;
-            margin-bottom: 10px;
-            padding: 12px 20px;
-            background-color: #C03700;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        .toggle-btn:hover {
-            background-color: #e64a19;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
-    <script>
-        function toggleContent(recipeId) {
-            const content = document.getElementById(recipeId);
-            content.classList.toggle('hidden');
-        }
-    </script>
-</head>
-<body>
+<script>
+    function toggleContent(recipeId) {
+        const content = document.getElementById(recipeId);
+        content.classList.toggle('hidden');
+    }
+</script>
+
+<p>When I'm not working at the Bank of England or on my PhD, I love to cook — especially French pastries! — and to create my own recipes. I want to use this page to share some of this and some tips I learned along the way.</p>
+
+<h1>Cooking Recipes</h1>
+
     <div class="container">
         <p>When I'm not working at the Bank of England or on my PhD, I love to cook - especially French pastries! - and to create my own recipes. I want to use this page to share some of this and some tips I learned along the way.</p>
         <h1> Cooking Recipes </h1>
@@ -141,5 +142,3 @@ author_profile: true
     
 
 </div>
-</body>
-</html>
