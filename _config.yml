@@ -33,5 +33,11 @@ top_panel_links:
     url: "/research/"
   - name: "Miscellaneous"
     url: "/miscellaneous/"
-  - name: "Recipes"
-    url: "/miscellaneous/recipes/"
+    sublinks:
+      - name: "Recipes"
+        url: "/miscellaneous/recipes/"
+      - name: "Another Subpage"
+        url: "/miscellaneous/another-subpage/"
+      - name: "CV"
+        url: "/cv/"
+    
