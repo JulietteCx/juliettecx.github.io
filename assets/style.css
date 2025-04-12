@@ -26,7 +26,7 @@ body {
 /* Container to hold both the navigation and content */
 .container {
   width: 40%; /* NEW: 40% of the screen width (2nd to 4th part) */
-  min-width: 800px; /* Optional: prevents it from becoming too small */
+  min-width: 1000px; /* Optional: prevents it from becoming too small */
   max-width: 1200px; /* Optional: prevents it from becoming too large */
 }
 
