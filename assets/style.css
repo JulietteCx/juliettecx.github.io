@@ -25,7 +25,7 @@ body {
 
 /* Container to hold both the navigation and content */
 .container {
-  width: 50%; /* NEW: 40% of the screen width (2nd to 4th part) */
+  width: 60%; /* NEW: 40% of the screen width (2nd to 4th part) */
 }
 
 /* Top navigation panel styles */
