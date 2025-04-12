@@ -13,6 +13,7 @@ Work in Progress
 
 
 **Should I Stay or Should I Go? The Effects of Floods on Firms' Location Decisions**, with Rebecca Mari
+Presented at Bank of England, Oxford Graduate Workshop in Environmental Economics, Environment Agency
 
 **Weather-Related Extreme Events, Agricultural Productivity and Insurance: Evidence from South America**, with Jonas Nauerz & Svetlana Vtyurina. Now _IMF Working Paper Series_
 
