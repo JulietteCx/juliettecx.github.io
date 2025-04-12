@@ -83,4 +83,18 @@ body {
   object-fit: cover; /* Ensures the image covers the circle without distortion */
 }
 
+a {
+  color: inherit;            /* same color as surrounding text */
+  text-decoration: none;     /* removes the underline */
+  cursor: pointer;           /* optional: shows pointer on hover */
+  transition: color 0.3s ease;
+}
+
+/* On hover, make them stand out */
+a:hover {
+  color: #e64a19;            /* or any color you want */
+  text-decoration: underline; /* optional: add underline on hover */
+}
+
+
 
