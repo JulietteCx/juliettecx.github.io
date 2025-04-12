@@ -9,6 +9,7 @@ baseurl: ""  # Subpath of your site, e.g. "/blog"
 repository: "https://juliettecx.github.io"
 author: "Juliette Caucheteux"
 email: "juliette.caucheteux@some.ox.ac.uk"
+institution: University of Oxford, Somerville College
 
 # Include _pages directory
 include:
