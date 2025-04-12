@@ -12,7 +12,7 @@ body {
 
 /* Sidebar on the left */
 .sidebar {
-  width: 12%; /* 1/7th of the screen width */
+  width: 20%; /* 1/7th of the screen width */
   background-color: #f4f4f4; /* White background */
   height: 100%; /* Full viewport height */
   padding: 20px;
@@ -25,7 +25,7 @@ body {
 
 /* Container to hold both the navigation and content */
 .container {
-  width: 40%; /* NEW: 40% of the screen width (2nd to 4th part) */
+  width: 50%; /* NEW: 40% of the screen width (2nd to 4th part) */
 }
 
 /* Top navigation panel styles */
