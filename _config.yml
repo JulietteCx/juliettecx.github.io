@@ -8,6 +8,7 @@ url: https://juliettecx.github.io  # Base hostname & protocol for your site
 baseurl: ""  # Subpath of your site, e.g. "/blog"
 repository: "https://juliettecx.github.io"
 author: "Juliette Caucheteux"
+email: "juliette.caucheteux@some.ox.ac.uk"
 
 # Include _pages directory
 include:
