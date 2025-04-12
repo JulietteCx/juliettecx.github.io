@@ -8,12 +8,12 @@ body {
   align-items: flex-start; /* Aligns the content to the top */
   height: 100vh; /* Full viewport height */
   background-color: #f4f4f4;
-} 
+}
 
- h1 {
-            color: black;
-            font-size: 24px;
-        }
+h1 {
+  color: black;
+  font-size: 24px;
+}
 
 /* Sidebar on the left */
 .sidebar {
@@ -101,9 +101,9 @@ a:hover {
   text-decoration: underline; /* optional: add underline on hover */
 }
 
-
+/* Dropdown menu styles */
 .nav-item {
-  position: relative;
+  position: relative; /* To position the dropdown properly */
 }
 
 .nav-item .dropdown {
@@ -142,7 +142,7 @@ a:hover {
   background-color: #eee;
 }
 
-
-
-
-
+/* Hover effect for the "Miscellaneous" item */
+.top-panel li:hover > .dropdown {
+  display: block;
+}
