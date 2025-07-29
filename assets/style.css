@@ -15,6 +15,16 @@ h1 {
   font-size: 24px;
 }
 
+h2 {
+  color: #5a5a5a;            /* A bold, standout color */
+  font-size: 20px;           /* Adjust the size */
+  margin-top: 30px;          /* Space above */
+  margin-bottom: 15px;       /* Space below */
+  font-weight: 600;          /* Semi-bold */
+  border-bottom: 2px solid #ccc; /* Optional underline for section headers */
+  padding-bottom: 5px;
+}
+
 /* Sidebar on the left */
 .sidebar {
   width: 20%; /* 1/7th of the screen width */
