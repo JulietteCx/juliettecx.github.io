@@ -72,17 +72,6 @@ h1 {
   background-color: #f4f4f4; /* Optional: for better visibility */
 }
 
-.hover-tabs {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.main-content:hover .hover-tabs {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 .circle-container {
   width: 10vw; /* 1/10th of the page width */
   height: 10vw; /* Same as width to make it a circle */
