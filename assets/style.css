@@ -46,18 +46,20 @@ h2 {
   width: 100%; /* Full width of the container */
   padding: 0;
   background-color: #f4f4f4; /* Optional: for better visibility */
+  overflow: visible; /* CRITICAL: Allow dropdowns to overflow */
 }
 
 .top-panel ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: visible; /* CRITICAL: Changed from 'hidden' to 'visible' to show dropdowns */
   display: flex; /* Flexbox to align items horizontally */
 }
 
 .top-panel li {
   flex: 1; /* Each list item takes equal space */
+  position: relative; /* Required for absolute positioning of dropdown */
 }
 
 .top-panel li a {
@@ -109,17 +111,18 @@ a:hover {
   text-decoration: underline; /* optional: add underline on hover */
 }
 
-/* Dropdown menu styles */
+/* ========== DROPDOWN MENU STYLES ========== */
+/* These rules handle the hover dropdown for "Miscellaneous" */
+
 .nav-item {
   position: relative;
-  display: flex;
-  align-items: center;
 }
 
 .nav-item.has-dropdown {
   position: relative;
 }
 
+/* Dropdown list - hidden by default */
 .nav-item .dropdown {
   display: none;
   position: absolute;
@@ -131,7 +134,7 @@ a:hover {
   margin: 0;
   border: 1px solid #ccc;
   min-width: 150px;
-  z-index: 1000;
+  z-index: 1000; /* Keep above other elements */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -141,6 +144,7 @@ a:hover {
   padding: 0;
 }
 
+/* KEY RULE: Show dropdown on hover */
 .nav-item:hover .dropdown {
   display: block;
 }
@@ -167,17 +171,3 @@ a:hover {
 .nav-item .dropdown li:last-child a {
   border-bottom: none;
 }
-
-/* FIX: Make dropdown visible on hover */
-.nav-item:hover .dropdown {
-  display: block !important;
-}
-
-.top-panel {
-  overflow: visible;
-}
-
-.top-panel ul {
-  overflow: visible;
-}
-
