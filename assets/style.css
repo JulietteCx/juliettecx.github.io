@@ -127,7 +127,7 @@ a:hover {
   display: none;
   position: absolute;
   top: 100%;
-  left: 25%;
+  left: 50%;
   transform: translateX(-50%);  /* ← NEW: Centers the dropdown horizontally */
   background-color: white;
   list-style: none;
