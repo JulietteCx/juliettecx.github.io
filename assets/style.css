@@ -127,7 +127,7 @@ a:hover {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%;
   background-color: white;
   list-style: none;
   padding: 0;
