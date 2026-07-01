@@ -168,5 +168,16 @@ a:hover {
   border-bottom: none;
 }
 
+/* FIX: Make dropdown visible on hover */
+.nav-item:hover .dropdown {
+  display: block !important;
+}
 
+.top-panel {
+  overflow: visible;
+}
+
+.top-panel ul {
+  overflow: visible;
+}
 
