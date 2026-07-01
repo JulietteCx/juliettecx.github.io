@@ -36,9 +36,9 @@ top_panel_links:
   - name: "Miscellaneous"
     url: "/miscellaneous/"
     sublinks:
-      - name: "Recipes"
-        url: "/miscellaneous/recipes/"
-      - name: "Salty"
-        url: "/miscellaneous/salty/"
+      - name: "Pastry Recipes"
+        url: "/miscellaneous/sweet/"
+      - name: "Savoury Recipes"
+        url: "/miscellaneous/savoury/"
       - name: "Gardening"
         url: "/miscellaneous/gardening/"
