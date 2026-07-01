@@ -38,4 +38,5 @@ top_panel_links:
         url: "/miscellaneous/recipes/"
       - name: "Salty"
         url: "/miscellaneous/salty/"
-    
+      - name: "Gardening"
+        url: "/miscellaneous/gardening/"
