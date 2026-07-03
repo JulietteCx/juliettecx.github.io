@@ -1,0 +1,70 @@
+name: Generate Miscellaneous Index
+
+on:
+  push:
+    branches:
+      - main  # Change this to 'master' if your default branch is called master
+    paths:
+      - 'miscellaneous/**' # Only runs when files inside this folder change
+
+permissions:
+  contents: write
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run generation script
+        run: |
+          python -c "
+          import os
+          TARGET_DIR = 'miscellaneous'
+          OUTPUT_FILE = 'miscellaneous.html'
+          links = []
+          
+          for root, dirs, files in os.walk(TARGET_DIR):
+              for file in files:
+                  if file.endswith('.html') and file != OUTPUT_FILE:
+                      web_path = os.path.join(root, file).replace(os.sep, '/')
+                      label = os.path.splitext(file)[0].replace('-', ' ').replace('_', ' ').title()
+                      links.append((web_path, label))
+          
+          links.sort(key=lambda x: x[1])
+          
+          html_content = '''<!DOCTYPE html>
+          <html>
+          <head>
+              <meta charset='UTF-8'>
+              <title>Miscellaneous Index</title>
+              <style>
+                  body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: 0 auto; }
+                  li { margin: 8px 0; }
+              </style>
+          </head>
+          <body>
+              <h1>Miscellaneous Pages</h1>
+              <ul>
+          '''
+          for path, label in links:
+              html_content += f'        <li><a href=\"{path}\">{label}</a></li>\n'
+          html_content += '    </ul>\n</body>\n</html>'
+          
+          with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+              f.write(html_content)
+          "
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add miscellaneous.html
+          git diff-index --quiet HEAD || git commit -m "Automated update of miscellaneous.html"
+          git push
