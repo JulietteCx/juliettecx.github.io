@@ -3,7 +3,7 @@ name: Generate Miscellaneous Index
 on:
   push:
     branches:
-      - main  # Change to 'master' if your default branch is called master
+      - main  # Change to 'master' if needed
     paths:
       - '_pages/**'
 
@@ -40,7 +40,6 @@ jobs:
           
           links.sort(key=lambda x: x[1])
           
-          # This injects your specific layout configuration blocks
           html_content = '''---
 layout: default
 title: "Miscellaneous"
@@ -64,5 +63,7 @@ author_profile: true
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _pages/miscellaneous.html
-          git diff-index --quiet HEAD || git commit -m "Automated update of _pages/miscellaneous.html with Jekyll front matter"
+          
+          # [skip ci] in the message prevents the infinite deployment loop!
+          git diff-index --quiet HEAD || git commit -m "Automated update of _pages/miscellaneous.html [skip ci]"
           git push
