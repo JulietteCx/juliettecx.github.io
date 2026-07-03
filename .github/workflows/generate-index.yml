@@ -1,66 +1,70 @@
 name: Generate Miscellaneous Index
+
 on:
   push:
     branches:
-      - main
+      - main  # Change this to 'master' if your default branch is called master
     paths:
-      - '_pages/miscellaneous/**'
+      - 'miscellaneous/**' # Only runs when files inside this folder change
+
 permissions:
   contents: write
+
 jobs:
   build-index:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-      
-      - name: Generate miscellaneous index
+          python-version: '3.x'
+
+      - name: Run generation script
         run: |
-          python3 << 'ENDPYTHON'
-import os
-import sys
+          python -c "
+          import os
+          TARGET_DIR = 'miscellaneous'
+          OUTPUT_FILE = 'miscellaneous.html'
+          links = []
+          
+          for root, dirs, files in os.walk(TARGET_DIR):
+              for file in files:
+                  if file.endswith('.html') and file != OUTPUT_FILE:
+                      web_path = os.path.join(root, file).replace(os.sep, '/')
+                      label = os.path.splitext(file)[0].replace('-', ' ').replace('_', ' ').title()
+                      links.append((web_path, label))
+          
+          links.sort(key=lambda x: x[1])
+          
+          html_content = '''<!DOCTYPE html>
+          <html>
+          <head>
+              <meta charset='UTF-8'>
+              <title>Miscellaneous Index</title>
+              <style>
+                  body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: 0 auto; }
+                  li { margin: 8px 0; }
+              </style>
+          </head>
+          <body>
+              <h1>Miscellaneous Pages</h1>
+              <ul>
+          '''
+          for path, label in links:
+              html_content += f'        <li><a href=\"{path}\">{label}</a></li>\n'
+          html_content += '    </ul>\n</body>\n</html>'
+          
+          with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+              f.write(html_content)
+          "
 
-TARGET_DIR = '_pages/miscellaneous'
-OUTPUT_FILE = '_pages/miscellaneous.html'
-
-# Collect HTML files
-links = []
-if os.path.isdir(TARGET_DIR):
-    for filename in sorted(os.listdir(TARGET_DIR)):
-        if filename.endswith('.html'):
-            # Create URL and label
-            url = f'/miscellaneous/{filename}'
-            label = filename.replace('.html', '').replace('-', ' ').replace('_', ' ').title()
-            links.append((url, label))
-            print(f"Found: {filename} -> {label}")
-
-# Write output file
-with open(OUTPUT_FILE, 'w') as f:
-    f.write('---\n')
-    f.write('layout: default\n')
-    f.write('title: "Miscellaneous"\n')
-    f.write('permalink: /miscellaneous/\n')
-    f.write('---\n')
-    f.write('\n')
-    f.write('<h1>Miscellaneous</h1>\n')
-    f.write('<ul>\n')
-    
-    for url, label in links:
-        f.write(f'  <li><a href="{url}">{label}</a></li>\n')
-    
-    f.write('</ul>\n')
-
-print(f"\nGenerated {OUTPUT_FILE} with {len(links)} items")
-ENDPYTHON
-      
-      - name: Commit changes
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add _pages/miscellaneous.html
-          git diff --cached --quiet || (git commit -m "Update miscellaneous index [skip ci]" && git push)
+          git add miscellaneous.html
+          git diff-index --quiet HEAD || git commit -m "Automated update of miscellaneous.html"
+          git push
