@@ -19,8 +19,10 @@ jobs:
           python-version: '3.x'
       - name: Run generation script
         run: |
-          python -c "
+          python << 'EOF'
           import os
+          import textwrap
+
           TARGET_DIR = '_pages/miscellaneous'
           OUTPUT_FILE = '_pages/miscellaneous.html'
           links = []
@@ -35,36 +37,30 @@ jobs:
 
           links.sort(key=lambda x: x[1])
 
-          content = '''---
-          layout: default
-          title: \"Miscellaneous\"
-          permalink: /miscellaneous/
-          author_profile: true
-          ---
+          content = textwrap.dedent('''\
+              ---
+              layout: default
+              title: "Miscellaneous"
+              permalink: /miscellaneous/
+              author_profile: true
+              ---
+              <p>In addition to my work and my PhD, I have many hobbies and love to learn new things. Below is an ordered list of interests with ideas to share.</p>
+              <style>
+                ul { list-style: none; padding: 0; }
+                li { margin: 10px 0; }
+                li a { color: #C03700; text-decoration: underline; font-size: 1.1em; }
+                li a:hover { color: #e64a19; }
+              </style>
+              <ul>
+          ''')
 
-          In addition to my work and my PhD, I have many hobbies and love to learn new things. Below is an ordered list of interests with ideas to share.
-            <style>
-            ul { list-style: none; padding: 0; }
-            li { margin: 10px 0; }
-            li a {
-              color: #C03700;
-              text-decoration: underline;
-              font-size: 1.1em;
-            }
-            li a:hover {
-              color: #e64a19;
-            }
-          </style>
-
-          <ul>
-          '''
           for url, label in links:
-              content += f'  <li><a href=\"{url}\">{label}</a></li>\n'
+              content += f'<li><a href="{url}">{label}</a></li>\n'
           content += '</ul>\n'
 
           with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
               f.write(content)
-          "
+          EOF
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
