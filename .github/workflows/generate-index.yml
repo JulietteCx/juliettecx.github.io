@@ -5,7 +5,7 @@ on:
     branches:
       - main  # Change this to 'master' if your default branch is called master
     paths:
-      - 'miscellaneous/**' # Only runs when files inside this folder change
+      - '_pages/miscellaneous/**' # Only runs when files inside this folder change
 
 permissions:
   contents: write
