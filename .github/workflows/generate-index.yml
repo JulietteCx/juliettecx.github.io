@@ -42,7 +42,8 @@ jobs:
           author_profile: true
           ---
 
-          <style>
+          In addition to my work and my PhD, I have many hobbies and love to learn new things. Below is an ordered list of interests with ideas to share.
+            <style>
             ul { list-style: none; padding: 0; }
             li { margin: 10px 0; }
             li a {
