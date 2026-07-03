@@ -5,7 +5,7 @@ on:
     branches:
       - main  # Change this to 'master' if your default branch is called master
     paths:
-      - 'miscellaneous/**' # Only runs when files inside this folder change
+      - '_pages/miscellaneous/**' # Only runs when files inside this folder change
 
 permissions:
   contents: write
@@ -27,7 +27,7 @@ jobs:
           python -c "
           import os
           TARGET_DIR = 'miscellaneous'
-          OUTPUT_FILE = 'miscellaneous.html'
+          OUTPUT_FILE = '_pages/miscellaneous.html'
           links = []
           
           for root, dirs, files in os.walk(TARGET_DIR):
@@ -65,6 +65,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add miscellaneous.html
+          git add _pages/miscellaneous.html
           git diff-index --quiet HEAD || git commit -m "Automated update of miscellaneous.html"
           git push
