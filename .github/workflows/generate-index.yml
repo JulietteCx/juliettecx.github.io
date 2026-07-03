@@ -13,58 +13,54 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
-      - name: Run generation script
+          python-version: '3.11'
+      
+      - name: Generate miscellaneous index
         run: |
-          python << 'EOF'
+          python3 << 'ENDPYTHON'
 import os
+import sys
 
 TARGET_DIR = '_pages/miscellaneous'
 OUTPUT_FILE = '_pages/miscellaneous.html'
+
+# Collect HTML files
 links = []
+if os.path.isdir(TARGET_DIR):
+    for filename in sorted(os.listdir(TARGET_DIR)):
+        if filename.endswith('.html'):
+            # Create URL and label
+            url = f'/miscellaneous/{filename}'
+            label = filename.replace('.html', '').replace('-', ' ').replace('_', ' ').title()
+            links.append((url, label))
+            print(f"Found: {filename} -> {label}")
 
-# Only process HTML files in the miscellaneous subdirectory
-if os.path.exists(TARGET_DIR):
-    for file in os.listdir(TARGET_DIR):
-        if file.endswith('.html'):
-            # Generate the URL path (relative to site root)
-            url_path = f'/miscellaneous/{file}'
-            # Generate the label from filename
-            label = os.path.splitext(file)[0].replace('-', ' ').replace('_', ' ').title()
-            links.append((url_path, label))
+# Write output file
+with open(OUTPUT_FILE, 'w') as f:
+    f.write('---\n')
+    f.write('layout: default\n')
+    f.write('title: "Miscellaneous"\n')
+    f.write('permalink: /miscellaneous/\n')
+    f.write('---\n')
+    f.write('\n')
+    f.write('<h1>Miscellaneous</h1>\n')
+    f.write('<ul>\n')
+    
+    for url, label in links:
+        f.write(f'  <li><a href="{url}">{label}</a></li>\n')
+    
+    f.write('</ul>\n')
 
-links.sort(key=lambda x: x[1])
-
-# Build the HTML content
-html_lines = [
-    '---',
-    'layout: default',
-    'title: "Miscellaneous"',
-    'permalink: /miscellaneous/',
-    'author_profile: true',
-    '---',
-    '<h1>Miscellaneous Pages</h1>',
-    '<ul>'
-]
-
-for url_path, label in links:
-    html_lines.append(f'  <li><a href="{url_path}">{label}</a></li>')
-
-html_lines.append('</ul>')
-
-# Write to file
-with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-    f.write('\n'.join(html_lines))
-
-print(f"Generated {OUTPUT_FILE} with {len(links)} links")
-EOF
-      - name: Commit and push changes
+print(f"\nGenerated {OUTPUT_FILE} with {len(links)} items")
+ENDPYTHON
+      
+      - name: Commit changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _pages/miscellaneous.html
-          git diff-index --quiet HEAD || git commit -m "Automated update of miscellaneous index [skip ci]"
-          git push
+          git diff --cached --quiet || (git commit -m "Update miscellaneous index [skip ci]" && git push)
