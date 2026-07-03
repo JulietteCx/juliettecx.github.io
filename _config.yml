@@ -31,7 +31,7 @@ top_panel_links:
     url: "/cv/"
   - name: "Research"
     url: "/research/"
-  - name: "Blog"
+  - name: "Policy Engagement"
     url: "/blog/"
   - name: "Miscellaneous"
     url: "/miscellaneous/"
