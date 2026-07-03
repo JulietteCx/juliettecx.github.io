@@ -19,7 +19,9 @@ Education
 
 Professional Experience
 ======
-**Bank of England**, PhD Intern in the Structural Economics Division, *Sept 2024 – Present*  
+**Nesta**, Senior Economic Adviser, *Present*  
+
+**Bank of England**, PhD Intern in the Structural Economics Division, *Sept 2024 – Dec 2024*  
 
 **International Monetary Fund**, PhD Intern in Western Hemisphere S3, *Jun 2024 – Sept 2024*  
 
