@@ -27,7 +27,7 @@ jobs:
           python -c "
           import os
           TARGET_DIR = 'miscellaneous'
-          OUTPUT_FILE = 'miscellaneous.html'
+          OUTPUT_FILE = '_pages/miscellaneous.html'
           links = []
           
           for root, dirs, files in os.walk(TARGET_DIR):
