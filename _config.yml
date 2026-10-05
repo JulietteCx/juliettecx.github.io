@@ -15,6 +15,9 @@ institution: University of Oxford, Somerville College
 include:
   - _pages
 
+plugins:
+  - jekyll-sitemap
+
 # Default settings for pages
 defaults:
   - scope:
